@@ -9,7 +9,7 @@
       
       <!-- Performance optimization: Load critical CSS first -->
       <link rel="preload" href="https://cdn.tailwindcss.com" as="style">
-      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Varela&display=swap" as="style">
       
       <!-- Core CSS -->
       <script src="https://cdn.tailwindcss.com"></script>
@@ -23,8 +23,8 @@
       <!-- Optimized Font Loading -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Varela&display=swap" rel="stylesheet">
-      
+<link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+
       <!-- Icons - Load async -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
             integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -60,6 +60,7 @@
           width: min(100% - 2rem, 75rem);
           margin-inline: auto;
         }
+
 
         /* Responsive Typography */
         :root {
@@ -147,12 +148,7 @@
           });
         }
       </script>
-   </head>
-   <body class="antialiased leading-normal">
-     
-   </body>
-
-<script>
+      <script>
 tailwind.config = {
   theme: {
     extend: {
@@ -162,7 +158,7 @@ tailwind.config = {
         accent: '#66fcf1'
       },
       fontFamily: {
-        'sans': ['Varela', 'sans-serif'],
+        'Varela': ['Varela', 'sans-serif'],
       },
       container: {
         center: true,
@@ -175,6 +171,11 @@ tailwind.config = {
   }
 }
 </script>
+   </head>
+   <body class="antialiased leading-normal ">
+
+
+
 
 <div id="root">
   <header class="fixed top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
@@ -214,8 +215,8 @@ tailwind.config = {
     
     <div class="relative container mx-auto px-4 pt-32 pb-20">
       <div class="max-w-3xl mx-auto text-center mt-20">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Crafting Perfect Sound for Visual Stories
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+          Crafting <span class="text-accent">Perfect Sound</span>  for Visual Stories
         </h1>
         <p class="text-lg sm:text-xl text-gray-200 mb-8">
           A full-service audio engineering company dedicated to delivering high-quality sound for films and visual media.
@@ -309,42 +310,54 @@ tailwind.config = {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Service Card 1 -->
           <div class="group bg-primary/50 backdrop-blur-sm rounded-xl p-6 hover:bg-accent/10 transition-all duration-300">
-            <img src="https://synccinema.co.in/wp-content/uploads/2023/03/6-1.jpg" alt="Sound Design" class="w-16 h-16 object-cover rounded-lg mb-4">
+            <div class="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center">
+              <img src="./images/icons/soundesign.webp" alt="Sound Design" class="w-14 h-14 object-cover rounded-lg">
+            </div>
             <h3 class="text-xl font-semibold text-white mb-3">Sound Design</h3>
             <p class="text-gray-300">Crafting immersive soundscapes that enhance your visual storytelling.</p>
           </div>
 
           <!-- Service Card 2 -->
           <div class="group bg-primary/50 backdrop-blur-sm rounded-xl p-6 hover:bg-accent/10 transition-all duration-300">
-            <img src="https://synccinema.co.in/wp-content/uploads/2023/03/5-1.jpg" alt="Dialogue Editing" class="w-16 h-16 object-cover rounded-lg mb-4">
+            <div class="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center">
+              <img src="./images/icons/dialogue-editing.webp" alt="Dialogue Editing" class="w-14 h-14 object-cover rounded-lg">
+            </div>
             <h3 class="text-xl font-semibold text-white mb-3">Dialogue Editing</h3>
             <p class="text-gray-300">Precise editing for crystal clear dialogue and natural speech flow.</p>
           </div>
 
           <!-- Service Card 3 -->
           <div class="group bg-primary/50 backdrop-blur-sm rounded-xl p-6 hover:bg-accent/10 transition-all duration-300">
-            <img src="https://synccinema.co.in/wp-content/uploads/2023/03/3-1-1.jpg" alt="ADR" class="w-16 h-16 object-cover rounded-lg mb-4">
+            <div class="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center">
+              <img src="./images/icons/dialogue-replacement.webp" alt="ADR" class="w-14 h-14 object-cover rounded-lg">
+            </div>
             <h3 class="text-xl font-semibold text-white mb-3">ADR</h3>
             <p class="text-gray-300">Professional automated dialogue replacement for perfect voice synchronization.</p>
           </div>
 
           <!-- Service Card 4 -->
           <div class="group bg-primary/50 backdrop-blur-sm rounded-xl p-6 hover:bg-accent/10 transition-all duration-300">
-            <img src="https://synccinema.co.in/wp-content/uploads/2023/03/2-1-1.jpg" alt="Foley Recording" class="w-16 h-16 object-cover rounded-lg mb-4">
+            <div class="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center">
+              <img src="./images/icons/foley-recording.webp" alt="Foley Recording" class="w-14 h-14 object-cover rounded-lg">
+            </div>
             <h3 class="text-xl font-semibold text-white mb-3">Foley Recording</h3>
             <p class="text-gray-300">Custom sound effects creation for authentic acoustic experiences.</p>
           </div>
 
           <!-- Service Card 5 -->
           <div class="group bg-primary/50 backdrop-blur-sm rounded-xl p-6 hover:bg-accent/10 transition-all duration-300">
-            <img src="https://synccinema.co.in/wp-content/uploads/2023/03/4-1-1.jpg" alt="Sound Mixing" class="w-16 h-16 object-cover rounded-lg mb-4">
+            <div class="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center">
+              <img src="./images/icons/sound-mixing.webp" alt="Sound Mixing" class="w-14 h-14 object-cover rounded-lg">
+            </div>
             <h3 class="text-xl font-semibold text-white mb-3">Sound Mixing</h3>
             <p class="text-gray-300">Professional mixing for stereo, 5.1, and 7.1 surround sound formats.</p>
           </div>
 
           <!-- Service Card 6 -->
           <div class="group bg-primary/50 backdrop-blur-sm rounded-xl p-6 hover:bg-accent/10 transition-all duration-300">
-            <img src="https://synccinema.co.in/wp-content/uploads/2023/03/7-1.jpg" alt="Sound Restoration" class="w-16 h-16 object-cover rounded-lg mb-4">
+            <div class="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center">
+              <img src="./images/icons/sound-restore.webp" alt="Sound Restoration" class="w-14 h-14 object-cover rounded-lg">
+            </div>
             <h3 class="text-xl font-semibold text-white mb-3">Sound Restoration</h3>
             <p class="text-gray-300">Revival and enhancement of degraded audio materials.</p>
           </div>
