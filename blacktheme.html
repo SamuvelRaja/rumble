@@ -13,34 +13,7 @@
       
       <!-- Core CSS -->
       <script src="https://cdn.tailwindcss.com"></script>
-      <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                primary: '#3B82F6',
-                secondary: '#10B981',
-                accent: '#8B5CF6',
-              },
-              fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
-                heading: ['Inter', 'system-ui', 'sans-serif'],
-              },
-              animation: {
-                'fade-in': 'fadeIn 0.5s ease-in',
-                'slide-up': 'slideUp 0.5s ease-out',
-              },
-            },
-          },
-          variants: {
-            extend: {
-              opacity: ['group-hover'],
-              transform: ['group-hover'],
-              scale: ['group-hover'],
-            },
-          },
-        }
-      </script>
+
 
       <!-- Utilities and Components -->
       <script defer src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
@@ -49,8 +22,8 @@
       
       <!-- Optimized Font Loading -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Varela&display=swap" rel="stylesheet">
       
       <!-- Icons - Load async -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
@@ -178,9 +151,7 @@
    <body class="antialiased leading-normal">
      
    </body>
-</html><element id="9125ec52-6d66-40d8-b13e-48002f6eed78" data-section-id="9125ec52-6d66-40d8-b13e-48002f6eed78">
 
-<htmlCode>
 <script>
 tailwind.config = {
   theme: {
@@ -188,10 +159,10 @@ tailwind.config = {
       colors: {
         primary: '#1E1E1E',
         secondary: '#292929',
-        accent: '#FF5733'
+        accent: '#66fcf1'
       },
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
+        'sans': ['Varela', 'sans-serif'],
       },
       container: {
         center: true,
@@ -237,7 +208,7 @@ tailwind.config = {
 
   <div class="relative min-h-screen">
     <div class="absolute inset-0">
-      <img src="https://synccinema.co.in/wp-content/uploads/2023/03/banner-1.jpg" class="w-full h-full object-cover" alt="Hero Background">
+      <img src="./images/bhero2.webp" class="w-full h-full object-cover" style="filter:hue-rotate(175deg);" alt="Hero Background">
       <div class="absolute inset-0 bg-black/50"></div>
     </div>
     
@@ -249,7 +220,7 @@ tailwind.config = {
         <p class="text-lg sm:text-xl text-gray-200 mb-8">
           A full-service audio engineering company dedicated to delivering high-quality sound for films and visual media.
         </p>
-        <a href="#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-6 py-3 rounded-full transition-all">
+        <a href="#contact" class="inline-flex  items-center gap-2 bg-accent  hover:bg-accent/90 text-black font-semibold px-6 py-3 rounded-full transition-all">
           Get Started
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -259,9 +230,8 @@ tailwind.config = {
     </div>
   </div>
 </div>
-</htmlCode></element><element id="8b8d87af-6e9c-4b45-adfc-0ef55725632b" data-section-id="8b8d87af-6e9c-4b45-adfc-0ef55725632b">
 
-<htmlCode>
+
 <div id="root">
   <section id="about" class="bg-primary py-24">
     <div class="container mx-auto px-4">
@@ -275,9 +245,8 @@ tailwind.config = {
         <!-- Content Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <!-- Image Grid -->
-          <div class="grid grid-cols-2 gap-4">
-            <img src="https://synccinema.co.in/wp-content/uploads/2023/04/Layer-1-1.jpg" alt="Studio Setup" class="w-full rounded-lg">
-            <img src="https://synccinema.co.in/wp-content/uploads/2023/04/Layer-2-1.jpg" alt="Recording Space" class="w-full rounded-lg">
+          <div>
+            <img src="./images/rumble2.webp"  alt="Studio Setup" class="w-full rounded-lg">
           </div>
 
           <!-- Content -->
@@ -324,9 +293,7 @@ tailwind.config = {
     </div>
   </section>
 </div>
-</htmlCode></element><element id="6eb43fda-9b02-4430-97f8-909ede508899" data-section-id="6eb43fda-9b02-4430-97f8-909ede508899">
 
-<htmlCode>
 <div id="root">
   <section id="services" class="bg-secondary py-24">
     <div class="container mx-auto px-4">
@@ -413,9 +380,7 @@ tailwind.config = {
     </div>
   </section>
 </div>
-</htmlCode></element><element id="a5bda059-5cc6-4375-aa25-f82649552173" data-section-id="a5bda059-5cc6-4375-aa25-f82649552173">
 
-<htmlCode>
 <div id="root">
   <section id="portfolio" class="bg-primary py-24">
     <div class="container mx-auto px-4">
@@ -476,7 +441,7 @@ tailwind.config = {
 
         <!-- View All Projects Button -->
         <div class="text-center mt-12">
-          <button class="bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300">
+          <button class="bg-accent hover:bg-accent/90 text-black font-semibold px-8 py-3 rounded-full transition-all duration-300">
             View All Projects
           </button>
         </div>
@@ -484,9 +449,7 @@ tailwind.config = {
     </div>
   </section>
 </div>
-</htmlCode></element><element id="69582a07-66eb-41e5-aee4-f44fa70d5001" data-section-id="69582a07-66eb-41e5-aee4-f44fa70d5001">
 
-<htmlCode>
 <div id="root">
   <section id="team" class="bg-secondary py-24">
     <div class="container mx-auto px-4">
@@ -558,9 +521,7 @@ tailwind.config = {
     </div>
   </section>
 </div>
-</htmlCode></element><element id="2f954d35-0347-43a0-a1cb-bce04d0939eb" data-section-id="2f954d35-0347-43a0-a1cb-bce04d0939eb">
 
-<htmlCode>
 <div id="root">
   <section id="workflow" class="bg-primary py-24">
     <div class="container mx-auto px-4">
@@ -647,9 +608,7 @@ tailwind.config = {
     </div>
   </section>
 </div>
-</htmlCode></element><element id="47eeb601-670f-4686-8c61-d7035811d402" data-section-id="47eeb601-670f-4686-8c61-d7035811d402">
 
-<htmlCode>
 <div id="root">
   <section id="studio_gallery" class="bg-secondary py-24">
     <div class="container mx-auto px-4">
@@ -733,9 +692,7 @@ tailwind.config = {
     </div>
   </section>
 </div>
-</htmlCode></element><element id="5ab05269-b81a-4754-bcdd-255d685ef142" data-section-id="5ab05269-b81a-4754-bcdd-255d685ef142">
 
-<htmlCode>
 <div id="root">
   <section id="testimonials" class="bg-primary py-24">
     <div class="container mx-auto px-4">
@@ -818,9 +775,7 @@ tailwind.config = {
     </div>
   </section>
 </div>
-</htmlCode></element><element id="199472cb-2426-47c0-aee9-092fad973467" data-section-id="199472cb-2426-47c0-aee9-092fad973467">
 
-<htmlCode>
 <div id="root">
   <section class="bg-neutral-900 py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -903,9 +858,7 @@ tailwind.config = {
     </div>
   </section>
 </div>
-</htmlCode></element><element id="2350dc5d-94d6-4b4d-a753-6128c30dd3d1" data-section-id="2350dc5d-94d6-4b4d-a753-6128c30dd3d1">
 
-<htmlCode>
 <div id="root">
   <footer class="bg-neutral-900 text-gray-400">
     <div class="relative overflow-hidden">
@@ -984,7 +937,7 @@ tailwind.config = {
     </div>
   </footer>
 </div>
-</htmlCode></element>
+
                     <div id="page_complete">
                     <script>
                         console.log('Page complete');
