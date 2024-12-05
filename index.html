@@ -18,10 +18,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
 
-      <!-- Icons - Load async -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
 
       <!-- Minimal Animation CSS -->
       <style>
@@ -150,6 +146,54 @@ tailwind.config = {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
         </a>
+         <h2>Dynamic Font Swapper</h2>
+  <select id="fontDropdown">
+    <option value="Inter">Inter</option>
+    <option value="Work Sans">Work Sans</option>
+    <option value="Mulish">Mulish</option>
+    <option value="Urbanist">Urbanist</option>
+    <option value="Manrope">Manrope</option>
+    <option value="IBM Plex Sans">IBM Plex Sans</option>
+    <option value="Plus Jakarta Sans">Plus Jakarta Sans</option>
+    <option value="Epilogue">Epilogue</option>
+    <option value="Outfit">Outfit</option>
+    <option value="Rubik">Rubik</option>
+    <option value="Poppins">Poppins</option>
+    <option value="Montserrat">Montserrat</option>
+    <option value="Nunito">Nunito</option>
+    <option value="Lato">Lato</option>
+    <option value="Open Sans">Open Sans</option>
+     <option value="Source Sans Pro">Source Sans Pro</option>
+  <option value="Raleway">Raleway</option>
+  <option value="Asap">Asap</option>
+  <option value="Barlow">Barlow</option>
+  <option value="Heebo">Heebo</option>
+  <option value="DM Sans">DM Sans</option>
+  <option value="Fira Sans">Fira Sans</option>
+  <option value="Hind">Hind</option>
+  <option value="Titillium Web">Titillium Web</option>
+  <option value="Cairo">Cairo</option>
+  <option value="Karla">Karla</option>
+  <option value="Lexend">Lexend</option>
+  <option value="Cabin">Cabin</option>
+  <option value="Maven Pro">Maven Pro</option>
+  <option value="Questrial">Questrial</option>
+  <option value="Exo 2">Exo 2</option>
+  <option value="Josefin Sans">Josefin Sans</option>
+  <option value="Varela Round">Varela Round</option>
+  <option value="Overpass">Overpass</option>
+  <option value="PT Sans">PT Sans</option>
+  <option value="Roboto">Roboto</option>
+  <option value="Ubuntu">Ubuntu</option>
+  <option value="Noto Sans">Noto Sans</option>
+  <option value="Signika Negative">Signika Negative</option>
+  <option value="Spectral">Spectral</option>
+  <option value="Public Sans">Public Sans</option>
+  <option value="Sen">Sen</option>
+  <option value="Arimo">Arimo</option>
+  <option value="Red Hat Display">Red Hat Display</option>
+  <option value="Sarabun">Sarabun</option>
+  </select>
       </div>
     </div>
   </div>
@@ -763,7 +807,39 @@ tailwind.config = {
     </div>
   </footer>
 </div>
+ <script>
+    const fontDropdown = document.getElementById('fontDropdown');
+    const body = document.body;
 
+    // Function to load Google Fonts dynamically
+    const loadFont = (fontName) => {
+      const linkId = 'dynamicFontLoader';
+      let linkTag = document.getElementById(linkId);
+
+      // Remove existing font link if present
+      if (linkTag) {
+        linkTag.parentNode.removeChild(linkTag);
+      }
+
+      // Create new link tag for the selected font
+      linkTag = document.createElement('link');
+      linkTag.id = linkId;
+      linkTag.rel = 'stylesheet';
+      linkTag.href = `https://fonts.googleapis.com/css2?family=${fontName.replace(
+        / /g,
+        '+'
+            )}:wght@100;200;300;400;500;600;700;800&display=swap`;
+      document.head.appendChild(linkTag);
+
+      // Apply the font style to the body
+      body.style.fontFamily = `'${fontName}', sans-serif`;
+    };
+
+    // Event listener for dropdown change
+    fontDropdown.addEventListener('change', (e) => {
+      loadFont(e.target.value);
+    });
+  </script>
                     </body>
                     </html>
                 
