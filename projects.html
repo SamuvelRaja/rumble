@@ -200,50 +200,34 @@
 <div >
   <div id="navbar_hero" class="bg-neutral-900 min-h-[80vh] relative">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-neutral-900/90 backdrop-blur-sm border-b border-neutral-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <div class="flex-shrink-0">
-            <a href="/" class="flex items-center">
-              <img src="https://synccinema.co.in/wp-content/uploads/2023/03/Asset-1.png" alt="Rumble Hauz Logo" class="h-8 w-auto">
-            </a>
-          </div>
-
-          <!-- Desktop Navigation -->
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-center space-x-8">
-              <a href="/" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300 px-3 py-2">Home</a>
-              <a href="/services" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300 px-3 py-2">Services</a>
-              <a href="/projects" class="text-[#66fcf1] font-medium px-3 py-2">Projects</a>
-              <a href="/about" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300 px-3 py-2">About</a>
-              <a href="/contact" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300 px-3 py-2">Contact</a>
-            </div>
-          </div>
-
-          <!-- Mobile menu button -->
-          <div class="md:hidden">
-            <button type="button" class="text-gray-300 hover:text-[#66fcf1] focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
+      <header class="fixed top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
+    <nav class="relative max-w-[85rem] w-full bg-black/30 backdrop-blur-lg border border-white/10 rounded-3xl mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto">
+      <div class="flex items-center justify-between">
+        <a class="flex-none" href="/" aria-label="Rumble Hauz">
+          <img class="w-auto h-12" src="https://synccinema.co.in/wp-content/uploads/2023/03/Asset-1.png" alt="Logo">
+        </a>
+        <div class="md:hidden">
+          <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-white/20 text-white hover:bg-white/10">
+            <svg class="hs-collapse-open:hidden size-4" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg class="hs-collapse-open:block hidden size-4" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
         </div>
       </div>
-
-      <!-- Mobile menu -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-          <a href="/" class="text-gray-300 hover:text-[#66fcf1] block px-3 py-2">Home</a>
-          <a href="/services" class="text-gray-300 hover:text-[#66fcf1] block px-3 py-2">Services</a>
-          <a href="/projects" class="text-[#66fcf1] font-medium block px-3 py-2">Projects</a>
-          <a href="/about" class="text-gray-300 hover:text-[#66fcf1] block px-3 py-2">About</a>
-          <a href="/contact" class="text-gray-300 hover:text-[#66fcf1] block px-3 py-2">Contact</a>
+      <div id="navbar-collapse" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
+        <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7">
+          <a class="font-medium text-white hover:text-accent md:py-6" href="/">Home</a>
+          <a class="font-medium text-white hover:text-accent md:py-6" href="#services">Services</a>
+          <a class="font-medium text-white hover:text-accent md:py-6" href="#about">About</a>
+          <a class="font-medium text-white hover:text-accent md:py-6" href="./projects.html">Projects</a>
+          <a class="font-medium text-white hover:text-accent md:py-6" href="#contact">Contact</a>
         </div>
       </div>
     </nav>
+  </header>
 
     <!-- Hero Section -->
     <div class="relative pt-24 pb-32 flex items-center min-h-[80vh] overflow-hidden">
@@ -387,36 +371,9 @@
       <!-- Section Header -->
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
-          Project Statistics
+          Areas of Expertise
         </h2>
         <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-8"></div>
-      </div>
-
-      <!-- Stats Grid -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Total Projects -->
-        <div class="bg-neutral-900 p-8 rounded-lg text-center group hover:bg-[#66fcf1]/5 transition-colors duration-300">
-          <div class="text-4xl font-bold text-[#66fcf1] mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
-          <div class="text-gray-300">Projects Completed</div>
-        </div>
-
-        <!-- Audio Hours -->
-        <div class="bg-neutral-900 p-8 rounded-lg text-center group hover:bg-[#66fcf1]/5 transition-colors duration-300">
-          <div class="text-4xl font-bold text-[#66fcf1] mb-2 group-hover:scale-110 transition-transform duration-300">5000+</div>
-          <div class="text-gray-300">Hours of Audio</div>
-        </div>
-
-        <!-- Sound Effects -->
-        <div class="bg-neutral-900 p-8 rounded-lg text-center group hover:bg-[#66fcf1]/5 transition-colors duration-300">
-          <div class="text-4xl font-bold text-[#66fcf1] mb-2 group-hover:scale-110 transition-transform duration-300">10K+</div>
-          <div class="text-gray-300">Sound Effects Created</div>
-        </div>
-
-        <!-- Happy Clients -->
-        <div class="bg-neutral-900 p-8 rounded-lg text-center group hover:bg-[#66fcf1]/5 transition-colors duration-300">
-          <div class="text-4xl font-bold text-[#66fcf1] mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
-          <div class="text-gray-300">Happy Clients</div>
-        </div>
       </div>
 
       <!-- Achievement Timeline -->
