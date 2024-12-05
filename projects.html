@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+  
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  50: '#f0f9ff',
+                  100: '#e0f2fe',
+                  200: '#bae6fd',
+                  300: '#7dd3fc',
+                  400: '#38bdf8',
+                  500: '#0ea5e9',
+                  600: '#0284c7',
+                  700: '#0369a1',
+                  800: '#075985',
+                  900: '#0c4a6e',
+                  950: '#082f49',
+                },
+                secondary: {
+                  50: '#f0fdf4',
+                  100: '#dcfce7',
+                  200: '#bbf7d0',
+                  300: '#86efac',
+                  400: '#4ade80',
+                  500: '#22c55e',
+                  600: '#16a34a',
+                  700: '#15803d',
+                  800: '#166534',
+                  900: '#14532d',
+                  950: '#052e16',
+                },
+                accent: {
+                  50: '#faf5ff',
+                  100: '#f3e8ff',
+                  200: '#e9d5ff',
+                  300: '#d8b4fe',
+                  400: '#c084fc',
+                  500: '#a855f7',
+                  600: '#9333ea',
+                  700: '#7e22ce',
+                  800: '#6b21a8',
+                  900: '#581c87',
+                  950: '#3b0764',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+
+      <!-- Base Styles -->
+      <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+
+<div >
+  <div id="navbar_hero" class="bg-neutral-900 min-h-[80vh] relative">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-neutral-900/90 backdrop-blur-sm border-b border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="/" class="flex items-center">
+              <img src="https://synccinema.co.in/wp-content/uploads/2023/03/Asset-1.png" alt="Rumble Hauz Logo" class="h-8 w-auto">
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a href="/" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300 px-3 py-2">Home</a>
+              <a href="/services" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300 px-3 py-2">Services</a>
+              <a href="/projects" class="text-[#66fcf1] font-medium px-3 py-2">Projects</a>
+              <a href="/about" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300 px-3 py-2">About</a>
+              <a href="/contact" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300 px-3 py-2">Contact</a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button type="button" class="text-gray-300 hover:text-[#66fcf1] focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="/" class="text-gray-300 hover:text-[#66fcf1] block px-3 py-2">Home</a>
+          <a href="/services" class="text-gray-300 hover:text-[#66fcf1] block px-3 py-2">Services</a>
+          <a href="/projects" class="text-[#66fcf1] font-medium block px-3 py-2">Projects</a>
+          <a href="/about" class="text-gray-300 hover:text-[#66fcf1] block px-3 py-2">About</a>
+          <a href="/contact" class="text-gray-300 hover:text-[#66fcf1] block px-3 py-2">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-24 pb-32 flex items-center min-h-[80vh] overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 to-neutral-900/90"></div>
+        <img src="https://samuvelraja.github.io/rumble/images/bhero2.webp" alt="Hero Background" class="w-full h-full object-cover opacity-100">
+      </div>
+      
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 font-heading">
+            Our <span class="text-[#66fcf1]">Sound Design</span> Projects
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+            Discover our portfolio of immersive sound experiences crafted for films, games, and interactive media.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <a href="#project_showcase" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-[#66fcf1] hover:bg-[#66fcf1]/90 transition-colors duration-300">
+              View Projects
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-3 border border-[#66fcf1] text-base font-medium rounded-md text-[#66fcf1] hover:bg-[#66fcf1]/10 transition-colors duration-300">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div >
+  <section id="video_gallery" class="bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
+          Project Videos
+        </h2>
+        <div class="w-24 h-1 bg-[#66fcf1] mx-auto"></div>
+      </div>
+
+      <!-- Video Gallery Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Video 1 -->
+        <div class="space-y-6">
+          <div class="aspect-video rounded-lg overflow-hidden shadow-lg bg-neutral-800">
+            <image 
+              class="w-full h-full"
+              src="./images/Turquoise.webp"
+              title="Sound Design Project Video 1"
+              />
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-white">Sound Design Showcase 1</h3>
+            <p class="text-gray-300">A detailed demonstration of our sound design process and final output for this project.</p>
+            <div class="flex items-center space-x-4">
+              <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Sound Design</span>
+              <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Post Production</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="space-y-6">
+          <div class="aspect-video rounded-lg overflow-hidden shadow-lg bg-neutral-800">
+            <image 
+              class="w-full h-full"
+              src="./images/pallete.webp"
+              title="Sound Design Project Video 1"
+              />
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-white">Sound Design Showcase 2</h3>
+            <p class="text-gray-300">Exploring the creative sound design elements and technical implementation.</p>
+            <div class="flex items-center space-x-4">
+              <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Sound Effects</span>
+              <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Mixing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Info -->
+      <div class="mt-16 text-center">
+        <p class="text-gray-300 mb-8">Want to learn more about our sound design process and capabilities?</p>
+        <a href="/contact" class="inline-flex items-center px-6 py-3 border border-[#66fcf1] text-[#66fcf1] rounded-md hover:bg-[#66fcf1] hover:text-black transition-colors duration-300">
+          Get in Touch
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div >
+  <section id="project_stats" class="bg-neutral-800 pb-24">
+    <div id="project_gallery" class="bg-neutral-900 border-t border-neutral-800 py-20 px-6 lg:px-12 mb-20">
+      <div class="max-w-7xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Project Gallery</h2>
+              <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-6"></div>
+              <p class="text-gray-400 text-lg">Browse through our portfolio of sound design projects</p>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Gallery Item 1 -->
+              <div class="group relative aspect-video bg-neutral-800 rounded-lg overflow-hidden">
+                  <iframe 
+                      src="https://www.youtube.com/embed/Wuxe4urstZU" 
+                      title="Project 1"
+                      class="w-full h-full object-cover"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                  </iframe>
+                  <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <p class="text-white font-bold text-center px-4">Sound Design Project</p>
+                  </div>
+              </div>
+
+              <!-- Gallery Item 2 -->
+              <div class="group relative aspect-video bg-neutral-800 rounded-lg overflow-hidden">
+                  <iframe 
+                      src="https://www.youtube.com/embed/JrC7NiMtYfE" 
+                      title="Project 2"
+                      class="w-full h-full object-cover"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                  </iframe>
+                  <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <p class="text-white font-bold text-center px-4">Sound Design Project</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
+          Project Statistics
+        </h2>
+        <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-8"></div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Total Projects -->
+        <div class="bg-neutral-900 p-8 rounded-lg text-center group hover:bg-[#66fcf1]/5 transition-colors duration-300">
+          <div class="text-4xl font-bold text-[#66fcf1] mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
+          <div class="text-gray-300">Projects Completed</div>
+        </div>
+
+        <!-- Audio Hours -->
+        <div class="bg-neutral-900 p-8 rounded-lg text-center group hover:bg-[#66fcf1]/5 transition-colors duration-300">
+          <div class="text-4xl font-bold text-[#66fcf1] mb-2 group-hover:scale-110 transition-transform duration-300">5000+</div>
+          <div class="text-gray-300">Hours of Audio</div>
+        </div>
+
+        <!-- Sound Effects -->
+        <div class="bg-neutral-900 p-8 rounded-lg text-center group hover:bg-[#66fcf1]/5 transition-colors duration-300">
+          <div class="text-4xl font-bold text-[#66fcf1] mb-2 group-hover:scale-110 transition-transform duration-300">10K+</div>
+          <div class="text-gray-300">Sound Effects Created</div>
+        </div>
+
+        <!-- Happy Clients -->
+        <div class="bg-neutral-900 p-8 rounded-lg text-center group hover:bg-[#66fcf1]/5 transition-colors duration-300">
+          <div class="text-4xl font-bold text-[#66fcf1] mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
+          <div class="text-gray-300">Happy Clients</div>
+        </div>
+      </div>
+
+      <!-- Achievement Timeline -->
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="relative flex items-center justify-center">
+          <div class="w-12 h-12 bg-[#66fcf1]/10 rounded-full flex items-center justify-center">
+            <img src="https://samuvelraja.github.io/rumble/images/icons/soundesign.webp" alt="Sound Design" class="w-6 h-6">
+          </div>
+          <div class="ml-4">
+            <h3 class="text-white font-bold">Sound Design</h3>
+            <p class="text-gray-400 text-sm">Expert craftsmanship</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-center">
+          <div class="w-12 h-12 bg-[#66fcf1]/10 rounded-full flex items-center justify-center">
+            <img src="https://samuvelraja.github.io/rumble/images/icons/dialogue-editing.webp" alt="Dialogue Editing" class="w-6 h-6">
+          </div>
+          <div class="ml-4">
+            <h3 class="text-white font-bold">Dialogue Editing</h3>
+            <p class="text-gray-400 text-sm">Crystal clear clarity</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-center">
+          <div class="w-12 h-12 bg-[#66fcf1]/10 rounded-full flex items-center justify-center">
+            <img src="https://samuvelraja.github.io/rumble/images/icons/foley-recording.webp" alt="Foley Recording" class="w-6 h-6">
+          </div>
+          <div class="ml-4">
+            <h3 class="text-white font-bold">Foley Recording</h3>
+            <p class="text-gray-400 text-sm">Authentic sounds</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-center">
+          <div class="w-12 h-12 bg-[#66fcf1]/10 rounded-full flex items-center justify-center">
+            <img src="https://samuvelraja.github.io/rumble/images/icons/sound-mixing.webp" alt="Sound Mixing" class="w-6 h-6">
+          </div>
+          <div class="ml-4">
+            <h3 class="text-white font-bold">Sound Mixing</h3>
+            <p class="text-gray-400 text-sm">Perfect balance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div >
+  <section id="testimonials" class="bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
+          Client Testimonials
+        </h2>
+        <div class="w-24 h-1 bg-[#66fcf1] mx-auto"></div>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-neutral-800 p-8 rounded-lg relative group hover:bg-neutral-800/80 transition-colors duration-300">
+          <div class="absolute top-0 right-0 mr-8 -mt-6">
+            <div class="text-[#66fcf1] text-6xl leading-none">"</div>
+          </div>
+          <div class="space-y-4">
+            <p class="text-gray-300 leading-relaxed">
+              "The sound design team demonstrated exceptional creativity and technical expertise. Their work significantly enhanced our project's impact."
+            </p>
+            <div class="flex items-center space-x-4 pt-4">
+              <img src="https://synccinema.co.in/wp-content/uploads/2023/03/3-1-1.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <div class="text-white font-semibold">Alex Thompson</div>
+                <div class="text-[#66fcf1] text-sm">Film Director</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-neutral-800 p-8 rounded-lg relative group hover:bg-neutral-800/80 transition-colors duration-300">
+          <div class="absolute top-0 right-0 mr-8 -mt-6">
+            <div class="text-[#66fcf1] text-6xl leading-none">"</div>
+          </div>
+          <div class="space-y-4">
+            <p class="text-gray-300 leading-relaxed">
+              "Outstanding attention to detail and creative solutions. The team's sound mixing and mastering services are truly top-notch."
+            </p>
+            <div class="flex items-center space-x-4 pt-4">
+              <img src="https://synccinema.co.in/wp-content/uploads/2023/03/4-1-1.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <div class="text-white font-semibold">Sarah Chen</div>
+                <div class="text-[#66fcf1] text-sm">Music Producer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-neutral-800 p-8 rounded-lg relative group hover:bg-neutral-800/80 transition-colors duration-300">
+          <div class="absolute top-0 right-0 mr-8 -mt-6">
+            <div class="text-[#66fcf1] text-6xl leading-none">"</div>
+          </div>
+          <div class="space-y-4">
+            <p class="text-gray-300 leading-relaxed">
+              "Their expertise in sound design brought our characters to life. The foley work and mixing were absolutely perfect."
+            </p>
+            <div class="flex items-center space-x-4 pt-4">
+              <img src="https://synccinema.co.in/wp-content/uploads/2023/03/5-1.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <div class="text-white font-semibold">Michael Rivera</div>
+                <div class="text-[#66fcf1] text-sm">Post-Production Supervisor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="mt-16 text-center">
+        <p class="text-gray-300 mb-8">Ready to elevate your project's audio experience?</p>
+        <a href="#contact_form" class="inline-flex items-center px-6 py-3 border border-[#66fcf1] text-[#66fcf1] rounded-md hover:bg-[#66fcf1] hover:text-black transition-colors duration-300">
+          Start Your Project
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div >
+  <section id="contact_form" class="bg-neutral-800 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
+          Start Your Project
+        </h2>
+        <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-8"></div>
+        <p class="text-gray-300 max-w-2xl mx-auto">
+          Ready to create something amazing? Let's discuss your project and bring your vision to life with perfect sound.
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="max-w-3xl mx-auto">
+        <form class="space-y-6">
+          <!-- Name -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="first_name" class="block text-sm font-medium text-gray-300 mb-2">First Name</label>
+              <input type="text" id="first_name" name="first_name" 
+                class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-[#66fcf1] focus:border-transparent text-white placeholder-gray-400"
+                placeholder="Enter your first name">
+            </div>
+            <div>
+              <label for="last_name" class="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
+              <input type="text" id="last_name" name="last_name" 
+                class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-[#66fcf1] focus:border-transparent text-white placeholder-gray-400"
+                placeholder="Enter your last name">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+            <input type="email" id="email" name="email" 
+              class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-[#66fcf1] focus:border-transparent text-white placeholder-gray-400"
+              placeholder="Enter your email">
+          </div>
+
+          <!-- Project Type -->
+          <div>
+            <label for="project_type" class="block text-sm font-medium text-gray-300 mb-2">Project Type</label>
+            <select id="project_type" name="project_type" 
+              class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-[#66fcf1] focus:border-transparent text-white">
+              <option value="" class="bg-neutral-900">Select project type</option>
+              <option value="film" class="bg-neutral-900">Film Sound Design</option>
+              <option value="game" class="bg-neutral-900">Game Audio</option>
+              <option value="music" class="bg-neutral-900">Music Production</option>
+              <option value="other" class="bg-neutral-900">Other</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Project Details</label>
+            <textarea id="message" name="message" rows="6" 
+              class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-[#66fcf1] focus:border-transparent text-white placeholder-gray-400"
+              placeholder="Tell us about your project"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex justify-center">
+            <button type="submit" 
+              class="px-8 py-4 bg-[#66fcf1] text-black rounded-lg font-semibold hover:bg-[#66fcf1]/90 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#66fcf1] focus:ring-offset-2 focus:ring-offset-neutral-800">
+              Send Message
+            </button>
+          </div>
+        </form>
+
+        <!-- Additional Contact Info -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-6">
+            <div class="text-[#66fcf1] mb-4">
+              <i class="fas fa-envelope text-2xl"></i>
+            </div>
+            <h3 class="text-white font-semibold mb-2">Email</h3>
+            <p class="text-gray-300">info@rumblehauz.com</p>
+          </div>
+          <div class="p-6">
+            <div class="text-[#66fcf1] mb-4">
+              <i class="fas fa-phone text-2xl"></i>
+            </div>
+            <h3 class="text-white font-semibold mb-2">Phone</h3>
+            <p class="text-gray-300">+1 234 567 890</p>
+          </div>
+          <div class="p-6">
+            <div class="text-[#66fcf1] mb-4">
+              <i class="fas fa-location-dot text-2xl"></i>
+            </div>
+            <h3 class="text-white font-semibold mb-2">Studio Location</h3>
+            <p class="text-gray-300">Los Angeles, CA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div >
+  <footer id="footer" class="bg-neutral-900 border-t border-neutral-800">
+    <!-- Main Footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <!-- Company Info -->
+        <div class="col-span-1 md:col-span-2">
+          <img src="https://synccinema.co.in/wp-content/uploads/2023/03/Asset-1.png" alt="Rumble Hauz Logo" class="h-8 w-auto mb-6">
+          <p class="text-gray-400 mb-6">Professional audio engineering and sound design services for films, games, and multimedia projects.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">
+              <span class="sr-only">Facebook</span>
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">
+              <span class="sr-only">Twitter</span>
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">
+              <span class="sr-only">Instagram</span>
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">
+              <span class="sr-only">LinkedIn</span>
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="/" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">Home</a></li>
+            <li><a href="/services" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">Services</a></li>
+            <li><a href="/projects" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">Projects</a></li>
+            <li><a href="/about" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">About</a></li>
+            <li><a href="/contact" class="text-gray-400 hover:text-[#66fcf1] transition-colors duration-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Contact Info</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start space-x-3">
+              <i class="fas fa-map-marker-alt text-[#66fcf1] mt-1"></i>
+              <span class="text-gray-400">Los Angeles, CA</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-phone text-[#66fcf1]"></i>
+              <span class="text-gray-400">+1 234 567 890</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-envelope text-[#66fcf1]"></i>
+              <span class="text-gray-400">info@rumblehauz.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-gray-400 text-sm">
+            © 2024 Rumble Hauz. All rights reserved.
+          </div>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-[#66fcf1] text-sm transition-colors duration-300">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-[#66fcf1] text-sm transition-colors duration-300">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-[#66fcf1] text-sm transition-colors duration-300">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button 
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      class="fixed bottom-8 right-8 bg-[#66fcf1] text-black p-3 rounded-full shadow-lg hover:bg-[#66fcf1]/90 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#66fcf1] focus:ring-offset-2 focus:ring-offset-neutral-900">
+      <span class="sr-only">Back to top</span>
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+</div>
+
+            </body>
+            </html>
+          

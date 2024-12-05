@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  50: '#f0f9ff',
+                  100: '#e0f2fe',
+                  200: '#bae6fd',
+                  300: '#7dd3fc',
+                  400: '#38bdf8',
+                  500: '#0ea5e9',
+                  600: '#0284c7',
+                  700: '#0369a1',
+                  800: '#075985',
+                  900: '#0c4a6e',
+                  950: '#082f49',
+                },
+                secondary: {
+                  50: '#f0fdf4',
+                  100: '#dcfce7',
+                  200: '#bbf7d0',
+                  300: '#86efac',
+                  400: '#4ade80',
+                  500: '#22c55e',
+                  600: '#16a34a',
+                  700: '#15803d',
+                  800: '#166534',
+                  900: '#14532d',
+                  950: '#052e16',
+                },
+                accent: {
+                  50: '#faf5ff',
+                  100: '#f3e8ff',
+                  200: '#e9d5ff',
+                  300: '#d8b4fe',
+                  400: '#c084fc',
+                  500: '#a855f7',
+                  600: '#9333ea',
+                  700: '#7e22ce',
+                  800: '#6b21a8',
+                  900: '#581c87',
+                  950: '#3b0764',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+
+
+      <!-- Base Styles -->
+      <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- Offline notification -->
+      <div class="fixed bottom-4 right-4 transform translate-y-full opacity-0 transition-all duration-300 offline:translate-y-0 offline:opacity-100">
+        <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">
+          You are currently offline
+        </div>
+      </div>
+   </body>
+</html><element id="f0d380db-dd7a-45bd-96c2-bef0d04df5ce" data-section-id="f0d380db-dd7a-45bd-96c2-bef0d04df5ce">
+
+<div id="root" class="bg-neutral-900 min-h-screen">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-neutral-800 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="https://synccinema.co.in/wp-content/uploads/2023/03/Asset-1.png" alt="Rumble Hauz Logo" class="h-8 w-auto">
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#navbar_hero" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300">Home</a>
+                    <a href="#featured_projects" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300">Projects</a>
+                    <a href="#video_showcase" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300">Videos</a>
+                    <a href="#contact_form" class="text-gray-300 hover:text-[#66fcf1] transition-colors duration-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden" x-data="{ mobileMenu: false }">
+                    <button @click="mobileMenu = !mobileMenu" class="text-gray-300 hover:text-[#66fcf1] focus:outline-none">
+                        <i class="fas" :class="{ 'fa-bars': !mobileMenu, 'fa-times': mobileMenu }"></i>
+                    </button>
+
+                    <!-- Mobile Menu Dropdown -->
+                    <div x-show="mobileMenu" 
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform -translate-y-2"
+                         x-transition:enter-end="opacity-100 transform translate-y-0"
+                         x-transition:leave="transition ease-in duration-200"
+                         x-transition:leave-start="opacity-100 transform translate-y-0"
+                         x-transition:leave-end="opacity-0 transform -translate-y-2"
+                         class="absolute top-16 left-0 right-0 bg-neutral-800 shadow-lg">
+                        <a href="#navbar_hero" class="block px-4 py-3 text-gray-300 hover:bg-neutral-700 transition-all duration-300">Home</a>
+                        <a href="#featured_projects" class="block px-4 py-3 text-gray-300 hover:bg-neutral-700 transition-all duration-300">Projects</a>
+                        <a href="#video_showcase" class="block px-4 py-3 text-gray-300 hover:bg-neutral-700 transition-all duration-300">Videos</a>
+                        <a href="#contact_form" class="block px-4 py-3 text-gray-300 hover:bg-neutral-700 transition-all duration-300">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with padding-top to account for fixed header -->
+    <main class="pt-20">
+        <!-- Video Projects Section -->
+        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="aspect-video">
+                <iframe class="w-full h-full rounded-lg shadow-lg" 
+                        src="https://www.youtube.com/embed/Wuxe4urstZU" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+            <div class="aspect-video">
+                <iframe class="w-full h-full rounded-lg shadow-lg" 
+                        src="https://www.youtube.com/embed/JrC7NiMtYfE" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+</div></element><element id="fe989e6a-ad6b-44c1-9c2f-c55ffc99c758" data-section-id="fe989e6a-ad6b-44c1-9c2f-c55ffc99c758">
+
+<section id="featured_projects" class="bg-neutral-900 py-20 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
+            <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-6"></div>
+            <p class="text-gray-400 text-lg">Explore our latest sound design works</p>
+        </div>
+    </div>
+</section></element><element id="4badbea2-6ce1-4b66-aadf-8f5e346f1386" data-section-id="4badbea2-6ce1-4b66-aadf-8f5e346f1386">
+
+<section id="video_showcase" class="bg-neutral-800 py-20 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Video Showcase</h2>
+            <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-6"></div>
+            <p class="text-gray-400 text-lg">Experience our sound design in action</p>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Video 1 -->
+            <div class="bg-neutral-900 rounded-lg overflow-hidden">
+                <div class="aspect-video">
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/Wuxe4urstZU"
+                        title="Sound Design Showcase"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Cinematic Sound Design</h3>
+                    <p class="text-gray-400">Immersive sound design showcasing dynamic audio elements and atmospheric soundscapes.</p>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="bg-neutral-900 rounded-lg overflow-hidden">
+                <div class="aspect-video">
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/JrC7NiMtYfE"
+                        title="Sound Design Showcase"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Creative Audio Production</h3>
+                    <p class="text-gray-400">Professional sound design and audio post-production demonstrating our expertise.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></element><element id="ff602113-30bb-4409-ad47-73b688c5eb04" data-section-id="ff602113-30bb-4409-ad47-73b688c5eb04">
+
+<section id="project_gallery" class="bg-neutral-900 py-20 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Project Gallery</h2>
+            <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-6"></div>
+            <p class="text-gray-400 text-lg">Browse through our portfolio of sound design projects</p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Gallery Item 1 -->
+            <div class="group relative aspect-video bg-neutral-800 rounded-lg overflow-hidden">
+                <iframe 
+                    src="https://www.youtube.com/embed/Wuxe4urstZU" 
+                    title="Project 1"
+                    class="w-full h-full object-cover"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p class="text-white font-bold text-center px-4">Sound Design Project</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="group relative aspect-video bg-neutral-800 rounded-lg overflow-hidden">
+                <iframe 
+                    src="https://www.youtube.com/embed/JrC7NiMtYfE" 
+                    title="Project 2"
+                    class="w-full h-full object-cover"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p class="text-white font-bold text-center px-4">Sound Design Project</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></element><element id="32bc5276-fc6b-47ce-9f60-e68d24c6df4d" data-section-id="32bc5276-fc6b-47ce-9f60-e68d24c6df4d">
+
+<section id="interactive_demos" class="bg-neutral-800 py-20 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Interactive Demos</h2>
+            <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-6"></div>
+            <p class="text-gray-400 text-lg">Experience our sound design work with interactive demonstrations</p>
+        </div>
+
+        <!-- Interactive Demo Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Demo 1: Wuxe4urstZU Project -->
+            <div class="bg-neutral-900 rounded-lg overflow-hidden">
+                <div class="aspect-video bg-neutral-800 relative">
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/Wuxe4urstZU" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Sound Design Project 1</h3>
+                    <p class="text-gray-400">Experience our professional sound design work</p>
+                </div>
+            </div>
+
+            <!-- Demo 2: JrC7NiMtYfE Project -->
+            <div class="bg-neutral-900 rounded-lg overflow-hidden">
+                <div class="aspect-video bg-neutral-800 relative">
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/JrC7NiMtYfE" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Sound Design Project 2</h3>
+                    <p class="text-gray-400">Another example of our sound design expertise</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></element><element id="75347c74-dc68-4f81-8b6b-35b2ad895c76" data-section-id="75347c74-dc68-4f81-8b6b-35b2ad895c76">
+
+<section id="testimonials" class="bg-neutral-900 py-20 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Client Testimonials</h2>
+            <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-6"></div>
+            <p class="text-gray-400 text-lg">What our clients say about working with us</p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-neutral-800 rounded-lg p-8 relative">
+                <div class="absolute -top-4 left-8">
+                    <div class="w-8 h-8 bg-[#66fcf1] transform rotate-45"></div>
+                </div>
+                <div class="relative">
+                    <div class="text-gray-300 italic mb-6">
+                        "The sound design and mixing for our short film was exceptional. The attention to detail and professional approach really enhanced our project."
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/100x100/66fcf1/ffffff?text=CF" 
+                             alt="Client Feedback" 
+                             class="w-12 h-12 rounded-full border-2 border-[#66fcf1]">
+                        <div class="ml-4">
+                            <div class="text-white font-bold">Short Film Client</div>
+                            <div class="text-gray-400 text-sm">Wuxe4urstZU Project</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-neutral-800 rounded-lg p-8 relative">
+                <div class="absolute -top-4 left-8">
+                    <div class="w-8 h-8 bg-[#66fcf1] transform rotate-45"></div>
+                </div>
+                <div class="relative">
+                    <div class="text-gray-300 italic mb-6">
+                        "The audio post-production work delivered exactly what we needed. The quality of sound editing and mixing significantly improved our video content."
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/100x100/66fcf1/ffffff?text=CF" 
+                             alt="Client Feedback" 
+                             class="w-12 h-12 rounded-full border-2 border-[#66fcf1]">
+                        <div class="ml-4">
+                            <div class="text-white font-bold">Video Project Client</div>
+                            <div class="text-gray-400 text-sm">JrC7NiMtYfE Project</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></element><element id="dd67ecc2-930f-489c-9961-bc74edf492fc" data-section-id="dd67ecc2-930f-489c-9961-bc74edf492fc">
+
+<section id="contact_form" class="bg-neutral-800 py-20 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Get in Touch</h2>
+            <div class="w-24 h-1 bg-[#66fcf1] mx-auto mb-6"></div>
+            <p class="text-gray-400 text-lg">Let's discuss your next project</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-neutral-900 rounded-lg p-8">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-white mb-2">Name</label>
+                        <input type="text" id="name" 
+                               class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:border-[#66fcf1] text-white"
+                               placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-white mb-2">Email</label>
+                        <input type="email" id="email" 
+                               class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:border-[#66fcf1] text-white"
+                               placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label for="project" class="block text-white mb-2">Project Type</label>
+                        <select id="project" 
+                                class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:border-[#66fcf1] text-white">
+                            <option value="">Select project type</option>
+                            <option value="project1">Cinematic Sound Design</option>
+                            <option value="project2">Game Sound Design</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-white mb-2">Message</label>
+                        <textarea id="message" rows="5" 
+                                  class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:border-[#66fcf1] text-white"
+                                  placeholder="Tell us about your project"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-[#66fcf1] text-neutral-900 py-3 px-6 rounded-lg font-bold hover:bg-opacity-90 transition-all duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section></element><element id="d3b0cd78-f1dc-416a-83d6-4bcaa4b47486" data-section-id="d3b0cd78-f1dc-416a-83d6-4bcaa4b47486">
+
+<footer id="footer" class="bg-neutral-900 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-8">
+        <!-- Header Section -->
+        <div class="flex flex-col items-center justify-center text-center mb-8">
+            <img src="https://synccinema.co.in/wp-content/uploads/2023/03/Asset-1.png" 
+                 alt="Rumble Hauz Logo" 
+                 class="h-16 w-auto mb-4">
+            <p class="text-gray-400 max-w-2xl">A full-service audio engineering company dedicated to delivering high-quality sound for films and visual media.</p>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-6 border-t border-neutral-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2024 Rumble Hauz. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-[#66fcf1] text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-[#66fcf1] text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
