@@ -7,18 +7,11 @@
       <meta name="description" content="AI-generated website">
       <meta name="theme-color" content="#ffffff">
       
-      <!-- Performance optimization: Load critical CSS first -->
-      <link rel="preload" href="https://cdn.tailwindcss.com" as="style">
-      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Varela&display=swap" as="style">
-      
+
       <!-- Core CSS -->
       <script src="https://cdn.tailwindcss.com"></script>
 
 
-      <!-- Utilities and Components -->
-      <script defer src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-      <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-      <script defer src="https://preline.co/assets/vendor/preline/dist/index.js"></script>
       
       <!-- Optimized Font Loading -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,74 +73,7 @@
         }
       </style>
 
-      <!-- Enhanced Image Handler -->
-      <script>
-        // Lazy loading and error handling for images
-        document.addEventListener('DOMContentLoaded', () => {
-          const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                  img.src = img.dataset.src;
-                  img.removeAttribute('data-src');
-                  observer.unobserve(img);
-                }
-              }
-            });
-          }, {
-            rootMargin: '50px 0px',
-            threshold: 0.01
-          });
 
-          const loadImage = (img) => {
-            if ('loading' in HTMLImageElement.prototype) {
-              img.loading = 'lazy';
-            }
-            
-            // Enhanced error handling
-            img.onerror = () => {
-              const width = img.getAttribute('width') || img.clientWidth || 300;
-              const height = img.getAttribute('height') || img.clientHeight || 200;
-              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
-              img.alt = 'Image unavailable';
-              img.classList.add('error-image');
-            };
-
-            if (img.dataset.src) {
-              imageObserver.observe(img);
-            }
-          };
-
-          // Process existing images
-          document.querySelectorAll('img[data-src]').forEach(loadImage);
-
-          // Watch for new images
-          new MutationObserver((mutations) => {
-            mutations.forEach(mutation => {
-              mutation.addedNodes.forEach(node => {
-                if (node.nodeType === 1 && node.tagName === 'IMG') {
-                  loadImage(node);
-                }
-                if (node.nodeType === 1) {
-                  node.querySelectorAll('img[data-src]').forEach(loadImage);
-                }
-              });
-            });
-          }).observe(document.body, {
-            childList: true,
-            subtree: true
-          });
-        });
-
-        // Performance monitoring
-        if ('performance' in window) {
-          window.addEventListener('load', () => {
-            const timing = performance.getEntriesByType('navigation')[0];
-            console.log(`Page load time: ${timing.loadEventEnd - timing.navigationStart}ms`);
-          });
-        }
-      </script>
       <script>
 tailwind.config = {
   theme: {
@@ -174,10 +100,7 @@ tailwind.config = {
    </head>
    <body class="antialiased leading-normal ">
 
-
-
-
-<div id="root">
+<div>
   <header class="fixed top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
     <nav class="relative max-w-[85rem] w-full bg-black/30 backdrop-blur-lg border border-white/10 rounded-3xl mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto">
       <div class="flex items-center justify-between">
@@ -233,7 +156,7 @@ tailwind.config = {
 </div>
 
 
-<div id="root">
+<div>
   <section id="about" class="bg-primary py-24">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
@@ -295,7 +218,7 @@ tailwind.config = {
   </section>
 </div>
 
-<div id="root">
+<div>
   <section id="services" class="bg-secondary py-24">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
@@ -394,7 +317,7 @@ tailwind.config = {
   </section>
 </div>
 
-<div id="root">
+<div>
   <section id="portfolio" class="bg-primary py-24">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
@@ -463,7 +386,7 @@ tailwind.config = {
   </section>
 </div>
 
-<div id="root">
+<div>
   <section id="team" class="bg-secondary py-24">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
@@ -535,7 +458,7 @@ tailwind.config = {
   </section>
 </div>
 
-<div id="root">
+<div>
   <section id="workflow" class="bg-primary py-24">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
@@ -622,7 +545,7 @@ tailwind.config = {
   </section>
 </div>
 
-<div id="root">
+<div>
   <section id="studio_gallery" class="bg-secondary py-24">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
@@ -706,7 +629,7 @@ tailwind.config = {
   </section>
 </div>
 
-<div id="root">
+<div>
   <section id="testimonials" class="bg-primary py-24">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
@@ -789,7 +712,7 @@ tailwind.config = {
   </section>
 </div>
 
-<div id="root">
+<div>
   <section class="bg-neutral-900 py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center mb-16">
@@ -872,7 +795,7 @@ tailwind.config = {
   </section>
 </div>
 
-<div id="root">
+<div>
   <footer class="bg-neutral-900 text-gray-400">
     <div class="relative overflow-hidden">
       <!-- Decorative gradient lines -->
