@@ -16,8 +16,7 @@
       <!-- Optimized Font Loading -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
       <!-- Minimal Animation CSS -->
       <style>
@@ -80,7 +79,7 @@ tailwind.config = {
         accent: '#66fcf1'
       },
       fontFamily: {
-        'Varela': ['Varela', 'sans-serif'],
+        'pbSans': ['Public Sans', 'sans-serif'],
       },
       container: {
         center: true,
@@ -94,7 +93,7 @@ tailwind.config = {
 }
 </script>
    </head>
-   <body class="antialiased leading-normal ">
+   <body class="antialiased leading-normal font-pbSans">
 
 <div>
   <header class="fixed top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
@@ -134,7 +133,7 @@ tailwind.config = {
     
     <div class="relative container mx-auto px-4 pt-32 pb-20">
       <div class="max-w-3xl mx-auto text-center mt-20">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
           Crafting <span class="text-accent">Perfect Sound</span>  for Visual Stories
         </h1>
         <p class="text-lg sm:text-xl text-gray-200 mb-8">
@@ -146,54 +145,7 @@ tailwind.config = {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
         </a>
-         <h2 class="text-3xl font-bold text-accent">change Font </h2>
-  <select id="fontDropdown">
-    <option value="Inter">Inter</option>
-    <option value="Work Sans">Work Sans</option>
-    <option value="Mulish">Mulish</option>
-    <option value="Urbanist">Urbanist</option>
-    <option value="Manrope">Manrope</option>
-    <option value="IBM Plex Sans">IBM Plex Sans</option>
-    <option value="Plus Jakarta Sans">Plus Jakarta Sans</option>
-    <option value="Epilogue">Epilogue</option>
-    <option value="Outfit">Outfit</option>
-    <option value="Rubik">Rubik</option>
-    <option value="Poppins">Poppins</option>
-    <option value="Montserrat">Montserrat</option>
-    <option value="Nunito">Nunito</option>
-    <option value="Lato">Lato</option>
-    <option value="Open Sans">Open Sans</option>
-     <option value="Source Sans Pro">Source Sans Pro</option>
-  <option value="Raleway">Raleway</option>
-  <option value="Asap">Asap</option>
-  <option value="Barlow">Barlow</option>
-  <option value="Heebo">Heebo</option>
-  <option value="DM Sans">DM Sans</option>
-  <option value="Fira Sans">Fira Sans</option>
-  <option value="Hind">Hind</option>
-  <option value="Titillium Web">Titillium Web</option>
-  <option value="Cairo">Cairo</option>
-  <option value="Karla">Karla</option>
-  <option value="Lexend">Lexend</option>
-  <option value="Cabin">Cabin</option>
-  <option value="Maven Pro">Maven Pro</option>
-  <option value="Questrial">Questrial</option>
-  <option value="Exo 2">Exo 2</option>
-  <option value="Josefin Sans">Josefin Sans</option>
-  <option value="Varela Round">Varela Round</option>
-  <option value="Overpass">Overpass</option>
-  <option value="PT Sans">PT Sans</option>
-  <option value="Roboto">Roboto</option>
-  <option value="Ubuntu">Ubuntu</option>
-  <option value="Noto Sans">Noto Sans</option>
-  <option value="Signika Negative">Signika Negative</option>
-  <option value="Spectral">Spectral</option>
-  <option value="Public Sans">Public Sans</option>
-  <option value="Sen">Sen</option>
-  <option value="Arimo">Arimo</option>
-  <option value="Red Hat Display">Red Hat Display</option>
-  <option value="Sarabun">Sarabun</option>
-  </select>
+         
       </div>
     </div>
   </div>
@@ -377,15 +329,17 @@ tailwind.config = {
           <div class="aspect-video rounded-lg overflow-hidden shadow-lg bg-neutral-800">
             <image 
               class="w-full h-full"
-              src="./images/pallete.webp"
+              src="./images/Turquoise.webp"
               title="Sound Design Project Video 1"
               />
           </div>
           <div class="space-y-4">
-            <h3 class="text-xl font-bold text-white">Pallete of colours</h3>
-            <p class="text-gray-300">Exploring the creative sound design elements and technical implementation.</p>
+            <h3 class="text-xl font-bold text-white">Turquoise Skies</h3>
+            <p class="text-gray-300">Turquoise Skies is an independent short film project made by aspiring creators. 
+              Selected for First-Time Filmmaker Session @Pinewood
+              Studios in the United Kingdom. Selected for One Earth awards Film festival in Bangalore</p>
             <div class="flex items-center space-x-4">
-              <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Sound Effects</span>
+              <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Sound Design</span>
               <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Mixing</span>
             </div>
           </div>
@@ -393,9 +347,11 @@ tailwind.config = {
 
         <!-- View All Projects Button -->
         <div class="text-center mt-12">
-          <button class="bg-accent hover:bg-accent/90 text-black font-semibold px-8 py-3 rounded-full transition-all duration-300">
-            View All Projects
-          </button>
+          <a href="./projects.html">
+            <button class="bg-accent hover:bg-accent/90 text-black font-semibold px-8 py-3 rounded-full transition-all duration-300">
+              View All Projects
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -407,9 +363,10 @@ tailwind.config = {
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
         <!-- Section Header -->
-        <div class="text-center mb-16">
+        <div class="text-center mb-12">
           <h2 class="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
           <p class="text-gray-300 max-w-2xl mx-auto">The creative minds behind Rumble Hauz</p>
+          <h3 class="text-2xl font-semibold text-white mt-8">Founders</h3>
           <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
         </div>
 
@@ -424,7 +381,7 @@ tailwind.config = {
                 </div>
               </div>
               <h3 class="text-2xl font-semibold text-white mt-4">Haardev Mahandheran</h3>
-              <p class="text-accent">Co-Founder</p>
+              
             </div>
             <div class="space-y-3">
               <p class="text-gray-300 text-center">Specializing in sound design and audio post-production with years of industry experience.</p>
@@ -451,7 +408,7 @@ tailwind.config = {
                 </div>
               </div>
               <h3 class="text-2xl font-semibold text-white mt-4">Prasath M I</h3>
-              <p class="text-accent">Co-Founder</p>
+              
             </div>
             <div class="space-y-3">
               <p class="text-gray-300 text-center">Expert in audio engineering and music production with a passion for creating immersive soundscapes.</p>
@@ -807,39 +764,6 @@ tailwind.config = {
     </div>
   </footer>
 </div>
- <script>
-    const fontDropdown = document.getElementById('fontDropdown');
-    const body = document.body;
-
-    // Function to load Google Fonts dynamically
-    const loadFont = (fontName) => {
-      const linkId = 'dynamicFontLoader';
-      let linkTag = document.getElementById(linkId);
-
-      // Remove existing font link if present
-      if (linkTag) {
-        linkTag.parentNode.removeChild(linkTag);
-      }
-
-      // Create new link tag for the selected font
-      linkTag = document.createElement('link');
-      linkTag.id = linkId;
-      linkTag.rel = 'stylesheet';
-      linkTag.href = `https://fonts.googleapis.com/css2?family=${fontName.replace(
-        / /g,
-        '+'
-            )}:wght@100;200;300;400;500;600;700;800&display=swap`;
-      document.head.appendChild(linkTag);
-
-      // Apply the font style to the body
-      body.style.fontFamily = `'${fontName}', sans-serif`;
-    };
-
-    // Event listener for dropdown change
-    fontDropdown.addEventListener('change', (e) => {
-      loadFont(e.target.value);
-    });
-  </script>
                     </body>
                     </html>
                 
