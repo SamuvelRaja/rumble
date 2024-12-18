@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Terms and Conditions</title>
-  
+  <link rel="icon" type="image/png" href="./images/favicon.png" type="image/x-icon">
+  <meta name="description" content="A full-service audio engineering company dedicated to delivering high-quality sound for films and visual media.">
+      <meta name="theme-color" content="#ffffff">
+      <meta name="author" content="Rumble Hauz">
+      <meta name="keywords" content="audio engineering, sound design, dialogue editing, ADR, foley recording, sound mixing, sound restoration">
+      <meta property="og:title" content="Rumble Hauz - Perfect Sound for Visual Stories">
+      <meta property="og:description" content="A full-service audio engineering company dedicated to delivering high-quality sound for films and visual media.">
+      <meta property="og:image" content="./images/OGimage.webp">
+      <meta property="og:url" content="https://www.rumblehauz.com">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Rumble Hauz - Perfect Sound for Visual Stories">
+      <meta name="twitter:description" content="A full-service audio engineering company dedicated to delivering high-quality sound for films and visual media.">
+      
       <!-- Core CSS -->
       <script src="https://cdn.tailwindcss.com"></script>
 
@@ -95,10 +107,10 @@ tailwind.config = {
     <nav class="relative max-w-[85rem] w-full bg-black/30 backdrop-blur-lg border border-white/10 rounded-3xl mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto">
       <div class="flex items-center justify-between">
         <a class="flex-none" href="/" aria-label="Rumble Hauz">
-                    <img class=" w-[240px]" src="./images/icons/logo1.svg" alt="Logo">
+          <img class=" w-[240px]" src="./images/icons/logo1.svg" alt="Logo">
         </a>
         <div class="md:hidden">
-          <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-white/20 text-white hover:bg-white/10">
+          <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-white/20 text-white hover:bg-white/10" onclick="toggleMobileMenu()">
             <svg class="hs-collapse-open:hidden size-4" stroke="currentColor" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -110,11 +122,11 @@ tailwind.config = {
       </div>
       <div id="navbar-collapse" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
         <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7">
-          <a class="font-medium text-white hover:text-accent md:py-6" href="/">Home</a>
+          <a class="font-medium text-accent hover:text-accent md:py-6" href="/">Home</a>
           <a class="font-medium text-white hover:text-accent md:py-6" href="#services">Services</a>
           <a class="font-medium text-white hover:text-accent md:py-6" href="#about">About</a>
           <a class="font-medium text-white hover:text-accent md:py-6" href="./projects.html">Projects</a>
-          <a class="font-medium text-white hover:text-accent md:py-6" href="#contact">Contact</a>
+          <a class="font-medium text-white hover:text-accent md:py-6" href="./#contact">Contact</a>
         </div>
       </div>
     </nav>
@@ -203,16 +215,13 @@ tailwind.config = {
         <div>
           <h3 class="text-white font-semibold mb-4">Contact Info</h3>
           <ul class="space-y-3">
-            <li class="flex items-start ">
-              <i class="fas fa-map-marker-alt text-[#66fcf1] mt-1"></i>
-              <span class="text-gray-400">Los Angeles, CA</span>
-            </li>
+            
             <li class="flex items-center ">
-              <i class="fas fa-phone text-[#66fcf1]"></i>
+              
               <span class="text-gray-400">+1 234 567 890</span>
             </li>
             <li class="flex items-center ">
-              <i class="fas fa-envelope text-[#66fcf1]"></i>
+              
               <span class="text-gray-400">rumblehauz.international@gmail.com</span>
             </li>
           </ul>
@@ -225,7 +234,7 @@ tailwind.config = {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="text-gray-400 text-sm">
-            © 2024 Rumble Hauz. All rights reserved.
+            © 2025 Rumble Hauz. All rights reserved.
           </div>
           <div class="flex space-x-6 mt-4 md:mt-0">
             <a href="./privacy.html" class="text-gray-400 hover:text-[#66fcf1] text-sm transition-colors duration-300">Privacy Policy</a>
@@ -244,5 +253,10 @@ tailwind.config = {
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="16" y1="6" x2="16" y2="28"></line> <polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="7.5,14 16,5.5 24.5,14 "></polyline> </g></svg>
     </button>
   </footer>
-</body>
+<script defer>
+    function toggleMobileMenu() {
+      const navbarCollapse = document.getElementById('navbar-collapse');
+      navbarCollapse.classList.toggle('hidden');
+    }
+  </script></body>
 </html>

@@ -15,9 +15,8 @@
       <meta name="keywords" content="audio engineering, sound design, dialogue editing, ADR, foley recording, sound mixing, sound restoration">
       <meta property="og:title" content="Rumble Hauz - Perfect Sound for Visual Stories">
       <meta property="og:description" content="A full-service audio engineering company dedicated to delivering high-quality sound for films and visual media.">
-      <meta property="og:image" content="./images/og-image.jpg">
-      <meta property="og:url" content="https://www.rumblehauz.com">
-
+      <meta property="og:image" content="./images/OGimage.webp">
+      <link rel="icon" type="image/png" href="./images/favicon.png" type="image/x-icon">
       
       <!-- Optimized Font Loading -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +41,7 @@
                   800: '#075985',
                   900: '#0c4a6e',
                   950: '#082f49',
+                  
                 },
                 secondary: {
                   50: '#f0fdf4',
@@ -57,7 +57,7 @@
                   950: '#052e16',
                 },
                 accent: {
-                  50: '#faf5ff',
+                  50: '#66fcf1',
                   100: '#f3e8ff',
                   200: '#e9d5ff',
                   300: '#d8b4fe',
@@ -220,7 +220,7 @@
           <img class=" w-[240px]" src="./images/icons/logo1.svg" alt="Logo">
         </a>
         <div class="md:hidden">
-          <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-white/20 text-white hover:bg-white/10">
+          <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-white/20 text-white hover:bg-white/10" onclick="toggleMobileMenu()">
             <svg class="hs-collapse-open:hidden size-4" stroke="currentColor" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -232,11 +232,11 @@
       </div>
       <div id="navbar-collapse" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
         <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7">
-          <a class="font-medium text-white hover:text-accent md:py-6" href="/">Home</a>
-          <a class="font-medium text-white hover:text-accent md:py-6" href="#services">Services</a>
-          <a class="font-medium text-white hover:text-accent md:py-6" href="#about">About</a>
-          <a class="font-medium text-white hover:text-accent md:py-6" href="./projects.html">Projects</a>
-          <a class="font-medium text-white hover:text-accent md:py-6" href="#contact">Contact</a>
+          <a class="font-medium text-white hover:text-accent-50 md:py-6" href="/">Home</a>
+          <a class="font-medium text-white hover:text-accent-50 md:py-6" href="#services">Services</a>
+          <a class="font-medium text-white hover:text-accent-50 md:py-6" href="#about">About</a>
+          <a class="font-medium text-accent-50 hover:text-accent-50 md:py-6" href="./projects.html">Projects</a>
+          <a class="font-medium text-white hover:text-accent-50 md:py-6" href="./#contact">Contact</a>
         </div>
       </div>
     </nav>
@@ -258,10 +258,10 @@
             Discover our portfolio of immersive sound experiences crafted for films, games, and interactive media.
           </p>
           <div class="flex justify-center space-x-4">
-            <a href="#project_showcase" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-[#66fcf1] hover:bg-[#66fcf1]/90 transition-colors duration-300">
+            <a href="#project_gallery" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-[#66fcf1] hover:bg-[#66fcf1]/90 transition-colors duration-300">
               View Projects
             </a>
-            <a href="/contact" class="inline-flex items-center px-8 py-3 border border-[#66fcf1] text-base font-medium rounded-md text-[#66fcf1] hover:bg-[#66fcf1]/10 transition-colors duration-300">
+            <a href="#contact_form" class="inline-flex items-center px-8 py-3 border border-[#66fcf1] text-base font-medium rounded-md text-[#66fcf1] hover:bg-[#66fcf1]/10 transition-colors duration-300">
               Get in Touch
             </a>
           </div>
@@ -320,7 +320,7 @@
             <h3 class="text-xl font-bold text-white">A Palette Of Emotions</h3>
             <p class="text-gray-300">Full Documentary Film.
               They embark on a journey of discovering the intricacies of Rupak's autism and the profound world of art, when art becomes a beacon of connection amidst the autism spectrum....</p>
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center flex-wrap gap-4">
               <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Sound Recording</span>
               <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Sound Design</span>
               <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Mixing</span>
@@ -339,7 +339,7 @@
           <div class="space-y-4 ">
             <h3 class="text-xl font-bold text-white">Paradise City</h3>
             <p class="text-gray-300">The lives of a small time peddler, three henchmen and one kingpin cross paths as a tricky situation unfolds one day. </p>
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center flex-wrap gap-4">
               <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Sound Recording</span>
               <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Sound Design</span>
               <span class="px-3 py-1 bg-[#66fcf1]/10 text-[#66fcf1] rounded-full text-sm">Mixing</span>
@@ -359,7 +359,7 @@
       <!-- Additional Info -->
       <div class="mt-16 text-center">
         <p class="text-gray-300 mb-8">Want to learn more about our sound design process and capabilities?</p>
-        <a href="/contact" class="inline-flex items-center px-6 py-3 border border-[#66fcf1] text-[#66fcf1] rounded-md hover:bg-[#66fcf1] hover:text-black transition-colors duration-300">
+        <a href="#contact_form" class="inline-flex items-center px-6 py-3 border border-[#66fcf1] text-[#66fcf1] rounded-md hover:bg-[#66fcf1] hover:text-black transition-colors duration-300">
           Get in Touch
           <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -431,8 +431,8 @@
       </div>
 
       <!-- Achievement Timeline -->
-      <div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="relative flex items-center justify-center">
+      <div class="mt-20 mx-auto w-[220px] md:w-full flex flex-col md:flex-row flex-wrap justify-center gap-8">
+        <div class="relative flex w-[220px]  items-center">
           <div class="w-12 h-12 bg-[#66fcf1]/10 rounded-full flex items-center justify-center">
             <img src="./images/icons/soundesign.webp" alt="Sound Design" class="w-6 h-6">
           </div>
@@ -442,7 +442,7 @@
           </div>
         </div>
 
-        <div class="relative flex items-center justify-center">
+        <div class="relative flex w-[220px]  items-center">
           <div class="w-12 h-12 bg-[#66fcf1]/10 rounded-full flex items-center justify-center">
             <img src="./images/icons/dialogue-editing.webp" alt="Dialogue Editing" class="w-6 h-6">
           </div>
@@ -452,7 +452,7 @@
           </div>
         </div>
 
-        <div class="relative flex items-center justify-center">
+        <div class="relative flex w-[220px]  items-center">
           <div class="w-12 h-12 bg-[#66fcf1]/10 rounded-full flex items-center justify-center">
             <img src="./images/icons/foley-recording.webp" alt="Foley Recording" class="w-6 h-6">
           </div>
@@ -462,7 +462,7 @@
           </div>
         </div>
 
-        <div class="relative flex items-center justify-center">
+        <div class="relative flex w-[220px]  items-center">
           <div class="w-12 h-12 bg-[#66fcf1]/10 rounded-full flex items-center justify-center">
             <img src="./images/icons/sound-mixing.webp" alt="Sound Mixing" class="w-6 h-6">
           </div>
@@ -476,90 +476,7 @@
   </section>
 </div>
 
-<div >
-  <section id="testimonials" class="bg-neutral-900 py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
-          Client Testimonials
-        </h2>
-        <div class="w-24 h-1 bg-[#66fcf1] mx-auto"></div>
-      </div>
 
-      <!-- Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-neutral-800 p-8 rounded-lg relative group hover:bg-neutral-800/80 transition-colors duration-300">
-          <div class="absolute top-0 right-0 mr-8 -mt-6">
-            <div class="text-[#66fcf1] text-6xl leading-none">"</div>
-          </div>
-          <div class="space-y-4">
-            <p class="text-gray-300 leading-relaxed">
-              "The sound design team demonstrated exceptional creativity and technical expertise. Their work significantly enhanced our project's impact."
-            </p>
-            <div class="flex items-center space-x-4 pt-4">
-              <img src="./images/icons/account.svg" alt="Client" class="w-12 h-12 rounded-full object-cover">
-              <div>
-                <div class="text-white font-semibold">Alex Thompson</div>
-                <div class="text-[#66fcf1] text-sm">Film Director</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="bg-neutral-800 p-8 rounded-lg relative group hover:bg-neutral-800/80 transition-colors duration-300">
-          <div class="absolute top-0 right-0 mr-8 -mt-6">
-            <div class="text-[#66fcf1] text-6xl leading-none">"</div>
-          </div>
-          <div class="space-y-4">
-            <p class="text-gray-300 leading-relaxed">
-              "Outstanding attention to detail and creative solutions. The team's sound mixing and mastering services are truly top-notch."
-            </p>
-            <div class="flex items-center space-x-4 pt-4">
-              <img src="./images/icons/account.svg" alt="Client" class="w-12 h-12 rounded-full object-cover">
-              <div>
-                <div class="text-white font-semibold">Sarah Chen</div>
-                <div class="text-[#66fcf1] text-sm">Music Producer</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="bg-neutral-800 p-8 rounded-lg relative group hover:bg-neutral-800/80 transition-colors duration-300">
-          <div class="absolute top-0 right-0 mr-8 -mt-6">
-            <div class="text-[#66fcf1] text-6xl leading-none">"</div>
-          </div>
-          <div class="space-y-4">
-            <p class="text-gray-300 leading-relaxed">
-              "Their expertise in sound design brought our characters to life. The foley work and mixing were absolutely perfect."
-            </p>
-            <div class="flex items-center space-x-4 pt-4">
-              <img src="./images/icons/account.svg" alt="Client" class="w-12 h-12 rounded-full object-cover">
-              <div>
-                <div class="text-white font-semibold">Michael Rivera</div>
-                <div class="text-[#66fcf1] text-sm">Post-Production Supervisor</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Call to Action -->
-      <div class="mt-16 text-center">
-        <p class="text-gray-300 mb-8">Ready to elevate your project's audio experience?</p>
-        <a href="#contact" class="inline-flex items-center px-6 py-3 border border-[#66fcf1] text-[#66fcf1] rounded-md hover:bg-[#66fcf1] hover:text-black transition-colors duration-300">
-          Start Your Project
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-</div>
 
 <div >
   <section id="contact_form" class="bg-neutral-800 py-24">
@@ -581,30 +498,7 @@
 "></iframe>
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 
-        <!-- Additional Contact Info -->
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div class="p-6">
-            <div class="text-[#66fcf1] mb-4">
-              <i class="fas fa-envelope text-2xl"></i>
-            </div>
-            <h3 class="text-white font-semibold mb-2">Email</h3>
-            <p class="text-gray-300">rumblehauz.international@gmail.com</p>
-          </div>
-          <div class="p-6">
-            <div class="text-[#66fcf1] mb-4">
-              <i class="fas fa-phone text-2xl"></i>
-            </div>
-            <h3 class="text-white font-semibold mb-2">Phone</h3>
-            <p class="text-gray-300">+1 234 567 890</p>
-          </div>
-          <div class="p-6">
-            <div class="text-[#66fcf1] mb-4">
-              <i class="fas fa-location-dot text-2xl"></i>
-            </div>
-            <h3 class="text-white font-semibold mb-2">Studio Location</h3>
-            <p class="text-gray-300">Chennai</p>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -653,16 +547,13 @@
         <div>
           <h3 class="text-white font-semibold mb-4">Contact Info</h3>
           <ul class="space-y-3">
-            <li class="flex items-start ">
-              <i class="fas fa-map-marker-alt text-[#66fcf1] mt-1"></i>
-              <span class="text-gray-400">Los Angeles, CA</span>
-            </li>
+            
             <li class="flex items-center ">
-              <i class="fas fa-phone text-[#66fcf1]"></i>
+              
               <span class="text-gray-400">+1 234 567 890</span>
             </li>
             <li class="flex items-center ">
-              <i class="fas fa-envelope text-[#66fcf1]"></i>
+              
               <span class="text-gray-400">rumblehauz.international@gmail.com</span>
             </li>
           </ul>
@@ -675,7 +566,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="text-gray-400 text-sm">
-            © 2024 Rumble Hauz. All rights reserved.
+            © 2025 Rumble Hauz. All rights reserved.
           </div>
           <div class="flex space-x-6 mt-4 md:mt-0">
             <a href="./privacy.html" class="text-gray-400 hover:text-[#66fcf1] text-sm transition-colors duration-300">Privacy Policy</a>
@@ -696,6 +587,11 @@
   </footer>
 </div>
 
-            </body>
+            <script defer>
+    function toggleMobileMenu() {
+      const navbarCollapse = document.getElementById('navbar-collapse');
+      navbarCollapse.classList.toggle('hidden');
+    }
+  </script></body>
             </html>
           
